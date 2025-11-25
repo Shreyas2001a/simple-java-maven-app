@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
     stages {
         stage('Build') {
             steps {
@@ -26,7 +23,7 @@ pipeline {
         }
         stage('Complete') { 
             steps {
-                echo 'Completed' 
+                echo 'Completed from NOT-MASTER branch' 
             }
         }
     }
